@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import SolidCounter from '../components/solid/Counter';
+import ReactCounter from '../components/react/Counter';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,6 +12,8 @@ import Card from '../components/Card.astro';
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
+		<ReactCounter client:only="react" />
+		<SolidCounter client:load />
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
