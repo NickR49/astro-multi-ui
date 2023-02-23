@@ -13,8 +13,14 @@ import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
+import vue from "@astrojs/vue";
+
+// https://astro.build/config
+import svelte from "@astrojs/svelte";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [solidJs(), react(), tailwind()],
+  integrations: [solidJs(), react(), tailwind(), vue(), svelte()],
   output: "server",
-  adapter: vercel(),
+  adapter: vercel()
 });

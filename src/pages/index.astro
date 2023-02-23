@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import SolidCounter from "../components/solid/Counter";
 import ReactCounter from "../components/react/Counter";
+import VueCounter from "../components/vue/Counter.vue";
+import SvelteCounter from "../components/svelte/Counter.svelte";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,6 +22,12 @@ import ReactCounter from "../components/react/Counter";
       </Card>
       <Card href="https://www.solidjs.com/" title="Solid JS">
         <SolidCounter client:load />
+      </Card>
+      <Card href="https://svelte.dev/" title="Svelte JS">
+        <SvelteCounter client:load />
+      </Card>
+      <Card href="https://vuejs.org/" title="Vue JS">
+        <VueCounter client:load />
       </Card>
     </ul>
   </main>
