@@ -1,26 +1,24 @@
+<template>
+  <button type="button" @click="handlePlus">+</button>
+  <p>{{ count }}</p>
+  <button type="button" @click="handleMinus">-</button>
+</template>
 
- <template>
-    <p>Result: {{ count }}</p>
-    <button type="button" @click="handlePlus">+</button>
-    <button type="button" @click="handleMinus">-</button>
-  </template>
-  
-  <script>
-  export default {
-    name: "Counter",
-    data() {
+<script>
+export default {
+  name: "Counter",
+  data() {
     return {
       count: 0,
     };
   },
-    methods: {
-      handlePlus() {
-        this.count++
-      },
-      handleMinus() {
-        this.count--
-      },
+  methods: {
+    handlePlus() {
+      this.count++;
     },
-  };
-  </script>
-  
+    handleMinus() {
+      this.count--;
+    },
+  },
+};
+</script>

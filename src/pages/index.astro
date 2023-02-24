@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Card from "../components/astro/Card.astro";
 import SolidCounter from "../components/solid/Counter";
 import ReactCounter from "../components/react/Counter";
 import VueCounter from "../components/vue/Counter.vue";
@@ -11,12 +11,11 @@ import SvelteCounter from "../components/svelte/Counter.svelte";
   <main>
     <h1>Welcome to <span class="text-gradient">Astro Multi UI!</span></h1>
     <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+      Components from four different UI Frameworks coexisting inside an Astro
+      page!
     </p>
 
-    <ul role="list" class="link-card-grid">
+    <div class="flex flex-col gap-4">
       <Card href="https://reactjs.org/" title="React JS">
         <ReactCounter client:load />
       </Card>
@@ -29,7 +28,7 @@ import SvelteCounter from "../components/svelte/Counter.svelte";
       <Card href="https://vuejs.org/" title="Vue JS">
         <VueCounter client:load />
       </Card>
-    </ul>
+    </div>
   </main>
 </Layout>
 
@@ -70,10 +69,10 @@ import SvelteCounter from "../components/svelte/Counter.svelte";
   .instructions strong {
     color: rgb(var(--accent));
   }
-  .link-card-grid {
+  /* .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
     padding: 0;
-  }
+  } */
 </style>
