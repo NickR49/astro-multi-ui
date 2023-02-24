@@ -9,7 +9,7 @@ export default function Counter() {
   return (
     <div class="flex flex-row gap-6">
       <Button label="-" onClick={() => counter.set($counter() - 1)} />
-      <div>{$counter()}</div>
+      <div class="w-12 text-center">{$counter()}</div>
       <Button label="+" onClick={() => counter.set($counter() + 1)} />
     </div>
   );

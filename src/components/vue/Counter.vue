@@ -1,39 +1,21 @@
-<script>
-// import Button from "./Button.vue";
-export default {
-  name: "Counter",
-  // components: {
-  //   Button,
-  // },
-  data() {
-    return {
-      count: 0,
-    };
-  },
-  methods: {
-    handlePlus() {
-      this.count++;
-    },
-    handleMinus() {
-      this.count--;
-    },
-  },
-};
+<script setup lang="ts">
+import { ref } from "vue";
+import Button from "./Button.vue";
+
+const count = ref(0);
+
+function decrement() {
+  count.value--;
+}
+function increment() {
+  count.value++;
+}
 </script>
 
 <template>
-  <div className="flex flex-row gap-6">
-    <button
-      class="rounded-full bg-white w-8"
-      type="button"
-      @click="handleMinus"
-    >
-      -
-    </button>
-    <!-- <Button label="asdasd" onClick="handleMinus" /> -->
-    <p>{{ count }}</p>
-    <button class="rounded-full bg-white w-8" type="button" @click="handlePlus">
-      +
-    </button>
+  <div class="flex flex-row gap-6">
+    <Button label="-" @click="decrement" />
+    <div class="w-12 text-center">{{ count }}</div>
+    <Button label="+" @click="increment" />
   </div>
 </template>

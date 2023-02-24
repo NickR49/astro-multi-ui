@@ -7,6 +7,6 @@
 
 <div class="flex flex-row gap-6">
     <Button label="-" onClick={() => count -= 1}  />
-    <span>{ count }</span>
+        <div class="w-12 text-center">{ count }</div>
     <Button label="+" onClick={() => count += 1}  />
 </div>

@@ -8,7 +8,7 @@ const Counter = () => {
   return (
     <div className="flex flex-row gap-6">
       <Button label="-" onClick={() => counter.set($counter - 1)} />
-      <span>{$counter}</span>
+      <div className="w-12 text-center">{$counter}</div>
       <Button label="+" onClick={() => counter.set($counter + 1)} />
     </div>
   );
