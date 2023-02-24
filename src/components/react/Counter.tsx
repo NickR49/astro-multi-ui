@@ -1,16 +1,15 @@
 import { useStore } from "@nanostores/react";
 import { counter } from "../../counterStore";
-import Button from "../solid/Button";
+import Button from "./Button";
 
 const Counter = () => {
   const $counter = useStore(counter);
   console.log(`React rendering`);
   return (
-    <div className="border-4 rounded-md">
-      <button onClick={() => counter.set($counter + 1)}>+</button>
-      {/* <Button label="-" onClick={() => counter.set($counter - 1)} /> */}
+    <div className="flex flex-row gap-6">
+      <Button label="-" onClick={() => counter.set($counter - 1)} />
       <span>{$counter}</span>
-      <button onClick={() => counter.set($counter - 1)}>-</button>
+      <Button label="+" onClick={() => counter.set($counter + 1)} />
     </div>
   );
 };

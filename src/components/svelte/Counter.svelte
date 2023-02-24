@@ -1,9 +1,12 @@
 
 <script>
+    import Button from "./Button.svelte";
 	let count = 0;
     console.log(`Svelte rendering`);
 </script>
 
-<button on:click={() => count -= 1}>-</button>
-<span>{ count }</span>
-<button on:click={() => count += 1}>+</button>
+<div class="flex flex-row gap-6">
+    <Button label="-" onClick={() => count -= 1}  />
+    <span>{ count }</span>
+    <Button label="+" onClick={() => count += 1}  />
+</div>
