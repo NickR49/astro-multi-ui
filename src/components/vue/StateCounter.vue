@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { useStore } from "@nanostores/vue";
 import Button from "./Button.vue";
+import { counter } from "../../counterStore";
 
-const count = ref(0);
-
-function decrement() {
-  count.value--;
-}
-function increment() {
-  count.value++;
-}
+const $counter = useStore(counter);
 </script>
 
 <template>
   <div class="flex flex-row gap-6">
-    <Button label="-" @click="decrement" />
-    <div class="w-12 text-center">{{ count }}</div>
-    <Button label="+" @click="increment" />
+    <Button label="-" @click="counter.set($counter - 1)" />
+    <div class="w-12 text-center">{{ $counter }}</div>
+    <Button label="+" @click="counter.set($counter + 1)" />
   </div>
 </template>

@@ -9,6 +9,7 @@ specifiers:
   '@astrojs/vue': ^2.0.1
   '@nanostores/react': ^0.4.1
   '@nanostores/solid': ^0.3.2
+  '@nanostores/vue': ^0.7.0
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^2.0.12
@@ -31,6 +32,7 @@ dependencies:
   '@astrojs/vue': 2.0.1_astro@2.0.14+vue@3.2.47
   '@nanostores/react': 0.4.1_nkfnbc2tpc77iht7asm3uqwau4
   '@nanostores/solid': 0.3.2_mmacn6hu7f5b6gra6h53zmsivu
+  '@nanostores/vue': 0.7.0_5k5a5xuqaffd2s4dm6vugcn64i
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   astro: 2.0.14
@@ -864,6 +866,21 @@ packages:
     dependencies:
       nanostores: 0.7.4
       solid-js: 1.6.11
+    dev: false
+
+  /@nanostores/vue/0.7.0_5k5a5xuqaffd2s4dm6vugcn64i:
+    resolution: {integrity: sha512-xQiiMlj0dFTAgjxXahPQQcGit7HpTo/lHKwAXg8yRyC6IkoB55tCsRBbAouMLSB4bdBoCgCmuKWcv7MRX1t9Zw==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      '@vue/devtools-api': '>=6.1.4'
+      nanostores: '>=0.7.3'
+      vue: '>=3.2.30'
+    peerDependenciesMeta:
+      '@vue/devtools-api':
+        optional: true
+    dependencies:
+      nanostores: 0.7.4
+      vue: 3.2.47
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:

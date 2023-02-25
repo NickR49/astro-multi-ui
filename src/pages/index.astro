@@ -9,30 +9,7 @@ import Header from "../components/astro/Header.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header title="This is the new header" />
-  <ul
-    class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6"
-  >
-    <li class="list-item list-inside">
-      Four different UI Frameworks coexisting inside an Astro page
-    </li>
-    <li class="list-item list-inside">All frameworks are using Tailwind</li>
-  </ul>
-
-  <div class="flex flex-col gap-4">
-    <Card href="https://reactjs.org/" title="React JS">
-      <ReactCounter client:load />
-    </Card>
-    <Card href="https://www.solidjs.com/" title="Solid JS">
-      <SolidCounter client:load />
-    </Card>
-    <Card href="https://svelte.dev/" title="Svelte JS">
-      <SvelteCounter client:load />
-    </Card>
-    <Card href="https://vuejs.org/" title="Vue JS">
-      <VueCounter client:load />
-    </Card>
-  </div>
+  <Header title="Astro Multi-framework Demo" />
 </Layout>
 
 <style></style>

@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/astro/Card.astro";
+import SolidCounter from "../components/solid/StateCounter";
+import ReactCounter from "../components/react/StateCounter";
+import VueCounter from "../components/vue/StateCounter.vue";
+import SvelteCounter from "../components/svelte/StateCounter.svelte";
+import Header from "../components/astro/Header.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <Header title="Multiple frameworks sharing state" />
+  <ul
+    class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6"
+  >
+    <li class="list-item list-inside">
+      Four different UI Frameworks coexisting inside an Astro page
+    </li>
+    <li class="list-item list-inside">All frameworks are using Tailwind</li>
+  </ul>
+
+  <div class="flex flex-col gap-4">
+    <Card href="https://reactjs.org/" title="React JS">
+      <ReactCounter client:load />
+    </Card>
+    <Card href="https://www.solidjs.com/" title="Solid JS">
+      <SolidCounter client:load />
+    </Card>
+    <Card href="https://svelte.dev/" title="Svelte JS">
+      <SvelteCounter client:load />
+    </Card>
+    <Card href="https://vuejs.org/" title="Vue JS">
+      <VueCounter client:load />
+    </Card>
+  </div>
+</Layout>
+
+<style></style>
