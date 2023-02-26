@@ -11,6 +11,7 @@
     "prettier": "prettier -w --plugin-search-dir=. ."
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.17.2",
     "@astrojs/react": "^2.0.2",
     "@astrojs/solid-js": "^2.0.2",
     "@astrojs/svelte": "^2.0.2",

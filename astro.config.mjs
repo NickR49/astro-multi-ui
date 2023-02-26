@@ -19,8 +19,11 @@ import vue from "@astrojs/vue";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
+import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [solidJs(), react(), tailwind(), vue(), svelte()],
+  integrations: [solidJs(), react(), tailwind(), vue(), svelte(), mdx()],
   output: "server",
   adapter: vercel(),
   markdown: {
@@ -30,7 +33,7 @@ export default defineConfig({
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
-    },
+      wrap: true
+    }
   }
 });
