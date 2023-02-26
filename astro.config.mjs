@@ -22,5 +22,14 @@ import svelte from "@astrojs/svelte";
 export default defineConfig({
   integrations: [solidJs(), react(), tailwind(), vue(), svelte()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
+  markdown: {
+    shikiConfig: {
+      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+      theme: 'dracula',
+      // https://github.com/shikijs/shiki/blob/main/docs/languages.md
+      langs: [],
+      // Enable word wrap to prevent horizontal scrolling
+      wrap: true,
+    },
 });

@@ -1,15 +1,17 @@
 ---
+import { getCollection } from "astro:content";
+
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/astro/Card.astro";
-import SolidCounter from "../components/solid/Counter";
-import ReactCounter from "../components/react/Counter";
-import VueCounter from "../components/vue/Counter.vue";
-import SvelteCounter from "../components/svelte/Counter.svelte";
 import Header from "../components/astro/Header.astro";
+
+const allExamples = await getCollection('example')
 ---
 
 <Layout title="Welcome to Astro.">
   <Header title="Astro Multi-framework Demo" />
+  <ul>
+    {allExamples.sort((a, b) => a.data.order - b.data.order).map(example => <li><a href={`/examples/${example.slug}`}>{example.data.title}</a></li>)}
+  </ul>
 </Layout>
 
 <style></style>

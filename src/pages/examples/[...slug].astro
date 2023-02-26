@@ -1,0 +1,40 @@
+---
+
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/astro/Header.astro';
+
+// Code for SSG
+// import {getCollection, CollectionEntry} from 'astro:content'
+// export async function getStaticPaths() {
+//     const examples = await getCollection('example')
+//     return examples.map(example => ({
+//         params: { slug: example.slug},
+//         props: example
+//     }))
+// }
+// const {data, render, id} = Astro.props
+// const {Content} = await render()
+
+// Code for SSR
+import { getEntryBySlug } from 'astro:content';
+// 1. Get the slug from the incoming server request
+const { slug } = Astro.params;
+// 2. Query for the entry directly using the request slug
+const entry = await getEntryBySlug('example', slug);
+// 3. (Optional) render the entry to HTML in the template
+// const { Content } = await entry.render();
+
+---
+
+<Layout>
+    <Header title={entry?.data.title ?? ''} />
+
+    <ul class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6">
+        {entry?.data.points.map(point => <li class="list-item list-inside">{point}</li>)}
+    </ul>
+
+    <div class="prose">
+        {entry?.body}
+        <!-- <Content /> -->
+    </div>
+</Layout>
