@@ -32,4 +32,5 @@ export default defineConfig({
       // Enable word wrap to prevent horizontal scrolling
       wrap: true,
     },
+  }
 });
