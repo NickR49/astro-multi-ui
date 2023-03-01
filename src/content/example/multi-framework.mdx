@@ -3,5 +3,28 @@ order: 1
 title: "Multiple frameworks on one page"
 points: ["Four different UI Frameworks coexisting inside an Astro page", "All frameworks are using Tailwind"]
 ---
+import Card from '../../components/astro/Card.astro';
+import ReactCounter from '../../components/react/Counter.tsx';
+import SolidCounter from '../../components/solid/Counter.tsx';
+import SvelteCounter from '../../components/svelte/Counter.svelte';
+import VueCounter from '../../components/vue/Counter.vue';
+
 This is my content.
+
+<Card href="https://reactjs.org/" title="React JS">
+    <ReactCounter client:load />
+</Card>
+<br />
+<Card href="https://www.solidjs.com/" title="Solid JS">
+    <SolidCounter client:load />
+</Card>
+<br />
+<Card href="https://svelte.dev/" title="Svelte JS">
+    <SvelteCounter client:load />
+</Card>
+<br />
+<Card href="https://vuejs.org/" title="Vue JS">
+    <VueCounter client:load />
+</Card>
+
 Bla bla bla.

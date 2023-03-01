@@ -1,5 +1,4 @@
 ---
-
 import Layout from '../../layouts/Layout.astro'
 import Header from '../../components/astro/Header.astro';
 
@@ -20,13 +19,12 @@ import { getEntryBySlug } from 'astro:content';
 // 1. Get the slug from the incoming server request
 const { slug } = Astro.params;
 // 2. Query for the entry directly using the request slug
-const entry = await getEntryBySlug('example', slug);
+const entry = await getEntryBySlug('example', slug ?? '');
 // 3. (Optional) render the entry to HTML in the template
-// const { Content } = await entry.render();
-
+const { Content } = await entry?.render();
 ---
 
-<Layout>
+<Layout title="Boo">
     <Header title={entry?.data.title ?? ''} />
 
     <ul class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6">
@@ -34,7 +32,7 @@ const entry = await getEntryBySlug('example', slug);
     </ul>
 
     <div class="prose">
-        {entry?.body}
-        <!-- <Content /> -->
+        <!-- {entry?.body} -->
+        <Content />
     </div>
 </Layout>

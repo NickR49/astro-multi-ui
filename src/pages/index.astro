@@ -9,6 +9,7 @@ const allExamples = await getCollection('example')
 
 <Layout title="Welcome to Astro.">
   <Header title="Astro Multi-framework Demo" />
+  <h2 class="font-bold">MDX versions</h2>
   <ul>
     {allExamples.sort((a, b) => a.data.order - b.data.order).map(example => <li><a href={`/examples/${example.slug}`}>{example.data.title}</a></li>)}
   </ul>

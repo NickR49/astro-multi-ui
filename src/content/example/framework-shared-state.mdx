@@ -3,5 +3,26 @@ order: 2
 title: "Multiple frameworks sharing state"
 points: ["All four Frameworks sharing state by using Astro Nano Stores"]
 ---
+import Card from '../../components/astro/Card.astro';
+import ReactCounter from '../../components/react/StateCounter.tsx';
+import SolidCounter from '../../components/solid/StateCounter.tsx';
+import SvelteCounter from '../../components/svelte/StateCounter.svelte';
+import VueCounter from '../../components/vue/StateCounter.vue';
+
 This is my content.
+<Card href="https://reactjs.org/" title="React JS">
+    <ReactCounter client:load />
+</Card>
+<br />
+<Card href="https://www.solidjs.com/" title="Solid JS">
+    <SolidCounter client:load />
+</Card>
+<br />
+<Card href="https://svelte.dev/" title="Svelte JS">
+    <SvelteCounter client:load />
+</Card>
+<br />
+<Card href="https://vuejs.org/" title="Vue JS">
+    <VueCounter client:load />
+</Card>
 Bla bla bla.
