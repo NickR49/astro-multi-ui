@@ -1,9 +1,12 @@
 ---
+import { getCollection } from "astro:content";
+
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const allExamples = await getCollection("example");
 ---
 
 <!DOCTYPE html>
@@ -16,18 +19,31 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-      \
-      <a href="/multi-fw">Multi-framework</a>
-      \
-      <a href="/shared-state">Shared state</a>
-    </nav>
-    <main>
-      <article>
-        <slot />
-      </article>
-    </main>
+    <div class="drawer drawer-mobile">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <main>
+          <label for="my-drawer" class="btn btn-primary drawer-button"
+            >Open drawer</label
+          >
+          <slot />
+        </main>
+      </div>
+      <div class="drawer-side">
+        <label for="my-drawer" class="drawer-overlay"></label>
+        <ul class="menu p-4 w-80 bg-base-100 text-base-content">
+          {
+            allExamples
+              .sort((a, b) => a.data.order - b.data.order)
+              .map((example) => (
+                <li>
+                  <a href={`/examples/${example.slug}`}>{example.data.title}</a>
+                </li>
+              ))
+          }
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
 <style is:global>
@@ -44,12 +60,12 @@ const { title } = Astro.props;
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
   }
-  main {
+  /* main {
     margin: auto;
     padding: 1rem;
     padding-top: 0;
     max-width: 60ch;
-  }
+  } */
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
