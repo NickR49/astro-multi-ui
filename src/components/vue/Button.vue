@@ -7,7 +7,7 @@ defineEmits(["click"]);
 
 <template>
   <button
-    className="rounded-full bg-white w-8"
+    className="btn-xs rounded-full bg-white w-8 border border-slate-600"
     type="button"
     @click="$emit('click')"
   >

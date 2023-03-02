@@ -7,7 +7,7 @@ export default function Counter() {
   const $counter = useStore(counter);
   console.log(`Solid rendering`);
   return (
-    <div class="flex flex-row gap-6">
+    <div class="flex flex-row gap-6 items-center">
       <Button label="-" onClick={() => counter.set($counter() - 1)} />
       <div class="w-12 text-center">{$counter()}</div>
       <Button label="+" onClick={() => counter.set($counter() + 1)} />

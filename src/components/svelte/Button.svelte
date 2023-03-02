@@ -4,5 +4,5 @@
     export let onClick: () => void
 </script>
 
-<button class="rounded-full bg-white w-8" on:click={onClick}>{ label}</button>
+<button class="btn-xs rounded-full bg-white w-8 border border-slate-600" on:click={onClick}>{ label}</button>
  

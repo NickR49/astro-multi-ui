@@ -8,7 +8,7 @@ interface Props {
 export default function Button(props: Props) {
   const { label, onClick } = props;
   return (
-    <button class="rounded-full bg-white w-8" onClick={onClick}>
+    <button class="btn-xs bg-white rounded-full w-8 border border-slate-600" onClick={onClick}>
       {label}
     </button>
   );

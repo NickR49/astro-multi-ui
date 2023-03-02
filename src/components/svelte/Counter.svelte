@@ -5,7 +5,7 @@
     console.log(`Svelte rendering`);
 </script>
 
-<div class="flex flex-row gap-6">
+<div class="flex flex-row gap-6 items-center">
     <Button label="-" onClick={() => count -= 1}  />
         <div class="w-12 text-center">{ count }</div>
     <Button label="+" onClick={() => count += 1}  />
