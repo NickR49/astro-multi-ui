@@ -33,6 +33,9 @@
     "vue": "^3.2.30"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.9",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0"
   }

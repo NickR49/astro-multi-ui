@@ -31,8 +31,5 @@ const { Content } = await entry?.render();
         {entry?.data.points.map(point => <li class="list-item list-inside">{point}</li>)}
     </ul>
 
-    <div class="prose">
-        <!-- {entry?.body} -->
-        <Content />
-    </div>
+    <Content />
 </Layout>
