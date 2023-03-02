@@ -27,17 +27,14 @@ const { Content } = await entry?.render();
 <Layout title="Boo">
   <Header title={entry?.data.title ?? ""} />
 
-  <ul
-    class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6"
-  >
-    {
-      entry?.data.points.map((point) => (
-        <li class="list-item list-inside">{point}</li>
-      ))
-    }
-  </ul>
-
   <article>
     <Content />
   </article>
 </Layout>
+
+<style>
+  article {
+    @apply mx-auto max-w-2xl;
+    margin-bottom: 2rem;
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+order: 1
+title: "Multiple frameworks on one page"
+points:
+  [
+    "Four different UI Frameworks coexisting inside an Astro page",
+    "All frameworks are using Tailwind",
+  ]
+---
+
+import Card from "../../components/astro/Card.astro";
+import ReactCounter from "../../components/react/Counter.tsx";
+import SolidCounter from "../../components/solid/Counter.tsx";
+import SvelteCounter from "../../components/svelte/Counter.svelte";
+import VueCounter from "../../components/vue/Counter.vue";
+
+Four different UI Frameworks coexisting inside an Astro page. All frameworks are using Tailwind.
+
+<br />
+<Card href="https://reactjs.org/" title="React JS">
+  <ReactCounter client:load />
+</Card>
+<br />
+<Card href="https://www.solidjs.com/" title="Solid JS">
+  <SolidCounter client:load />
+</Card>
+<br />
+<Card href="https://svelte.dev/" title="Svelte JS">
+  <SvelteCounter client:load />
+</Card>
+<br />
+<Card href="https://vuejs.org/" title="Vue JS">
+  <VueCounter client:load />
+</Card>
+<br />
+Example of rendering code with syntax highlighting within mdx -
+<br />
+
+<div class="prose">
+```ts
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  console.log(`React rendering`);
+  return (
+    <div className="flex flex-row gap-6">
+      <Button label="-" onClick={() => setCount(count - 1)} />
+      <div className="w-12 text-center">{count}</div>
+      <Button label="+" onClick={() => setCount(count + 1)} />
+    </div>
+  );
+};
+```
+</div>
