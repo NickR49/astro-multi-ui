@@ -1,0 +1,57 @@
+---
+order: 3
+title: "Nested frameworks"
+tags:
+  [
+    "Four different UI Frameworks coexisting inside an Astro page",
+    "All frameworks are using Tailwind",
+  ]
+---
+
+import ReactCard from "../../components/react/Card.tsx";
+import SolidCard from "../../components/solid/Card.tsx";
+import SvelteCard from "../../components/svelte/Card.svelte";
+import VueCard from "../../components/vue/Card.vue";
+import SvelteCounter from "../../components/svelte/Counter.svelte";
+import VueCounter from "../../components/vue/Counter.vue";
+
+From within an Astro file, components from different frameworks can be nested within each other -
+
+<br />
+<ReactCard client:load>
+  <SolidCard client:load>
+    <SvelteCard client:load />
+  </SolidCard>
+  <SvelteCard client:load>
+    <SolidCard client:load />
+  </SvelteCard>
+</ReactCard>
+<SolidCard client:load>
+  <ReactCard client:load>
+    <VueCard client:load>
+      <SvelteCard client:load />
+    </VueCard>
+  </ReactCard>
+</SolidCard>
+<br />
+The code -
+<br />
+<div class="prose">
+  ```tsx
+  <ReactCard client:load>
+    <SolidCard client:load>
+      <SvelteCard client:load />
+    </SolidCard>
+    <SvelteCard client:load>
+      <SolidCard client:load />
+    </SvelteCard>
+  </ReactCard>
+  <SolidCard client:load>
+    <ReactCard client:load>
+      <VueCard client:load>
+        <SvelteCard client:load />
+      </VueCard>
+    </ReactCard>
+  </SolidCard>
+  ```
+</div>

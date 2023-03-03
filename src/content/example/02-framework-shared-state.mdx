@@ -1,7 +1,7 @@
 ---
 order: 2
 title: "Multiple frameworks sharing state"
-points: ["All four Frameworks sharing state by using Astro Nano Stores"]
+tags: ["All four Frameworks sharing state by using Astro Nano Stores"]
 ---
 
 import Card from "../../components/astro/Card.astro";
@@ -16,15 +16,12 @@ All four Frameworks sharing state by using Astro Nano Stores.
 <Card href="https://reactjs.org/" title="React JS">
   <ReactCounter client:load />
 </Card>
-<br />
 <Card href="https://www.solidjs.com/" title="Solid JS">
   <SolidCounter client:load />
 </Card>
-<br />
 <Card href="https://svelte.dev/" title="Svelte JS">
   <SvelteCounter client:load />
 </Card>
-<br />
 <Card href="https://vuejs.org/" title="Vue JS">
   <VueCounter client:load />
 </Card>
