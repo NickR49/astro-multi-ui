@@ -8,19 +8,26 @@ const allExamples = await getCollection("example");
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header title="Astro Multi-framework Demo" />
-  <h2 class="font-bold">MDX versions</h2>
-  <ul>
-    {
-      allExamples
-        .sort((a, b) => a.data.order - b.data.order)
-        .map((example) => (
-          <li>
-            <a href={`/examples/${example.slug}`}>{example.data.title}</a>
-          </li>
-        ))
-    }
-  </ul>
+  <Header title="Astro Multi-framework Demon" />
+  <article>
+    <h2 class="font-bold">Examples</h2>
+    <ul>
+      {
+        allExamples
+          .sort((a, b) => a.data.order - b.data.order)
+          .map((example) => (
+            <li>
+              <a href={`/examples/${example.slug}`}>{example.data.title}</a>
+            </li>
+          ))
+      }
+    </ul>
+  </article>
 </Layout>
 
-<style></style>
+<style>
+  article {
+    @apply mx-auto max-w-2xl;
+    margin-bottom: 2rem;
+  }
+</style>
