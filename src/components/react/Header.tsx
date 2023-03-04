@@ -1,3 +1,4 @@
+import { useStore } from "@nanostores/react";
 import {
   AppBar,
   IconButton,
@@ -8,7 +9,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { open } from "../../leftNavStore";
-import { useStore } from "@nanostores/react";
 
 interface Props {
   onClick: () => void;
@@ -33,7 +33,9 @@ export default function Header(props: Props) {
             <MenuIcon />
           </IconButton>
         )}
-        <Typography ml={smallScreen ? 1 : 2}>N I X</Typography>
+        <a href="/">
+          <Typography ml={smallScreen ? 1 : 2}>N I X</Typography>
+        </a>
       </Toolbar>
     </AppBar>
   );

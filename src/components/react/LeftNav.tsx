@@ -4,6 +4,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  SwipeableDrawer,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -26,17 +27,18 @@ export default function LeftNav(props: Props) {
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Drawer
+    <SwipeableDrawer
       variant={smallScreen ? "temporary" : "permanent"}
       open={$open}
-      sx={{ top: 30 }}
+      onOpen={() => open.set(true)}
+      onClose={() => open.set(false)}
     >
       <Toolbar />
       <List>
         <Typography m={1} fontWeight={600}>
           Astro Examples
         </Typography>
-        {items.map((item, index) => (
+        {items.map((item) => (
           <ListItem key={item.id} disablePadding sx={{ display: "block" }}>
             <ListItemButton
               sx={{
@@ -58,6 +60,6 @@ export default function LeftNav(props: Props) {
           </ListItem>
         ))}
       </List>
-    </Drawer>
+    </SwipeableDrawer>
   );
 }

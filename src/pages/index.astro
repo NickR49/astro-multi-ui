@@ -10,24 +10,12 @@ const allExamples = await getCollection("example");
 <Layout title="Welcome to Astro.">
   <Title title="Astro Multi-framework Demo" />
   <article>
-    <h2 class="font-bold">Examples</h2>
-    <ul>
-      {
-        allExamples
-          .sort((a, b) => a.data.order - b.data.order)
-          .map((example) => (
-            <li>
-              <a href={`/examples/${example.slug}`}>{example.data.title}</a>
-            </li>
-          ))
-      }
-    </ul>
+    <p>A basic example of Astro pulling in various frameworks.</p>
   </article>
 </Layout>
 
 <style>
   article {
-    @apply mx-auto max-w-2xl;
-    margin-bottom: 2rem;
+    margin: 24px;
   }
 </style>
