@@ -2,7 +2,6 @@
 <script>
     import Button from "./Button.svelte";
 	let count = 0;
-    console.log(`Svelte rendering`);
 </script>
 
 <div class="flex flex-row gap-6 items-center">

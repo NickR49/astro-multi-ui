@@ -3,7 +3,6 @@ import Button from "./Button";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  console.log(`React rendering`);
   return (
     <div className="flex flex-row gap-6 items-center">
       <Button label="-" onClick={() => setCount(count - 1)} />

@@ -2,9 +2,8 @@ import { useStore } from "@nanostores/react";
 import { counter } from "../../counterStore";
 import Button from "./Button";
 
-const Counter = () => {
+const StateCounter = () => {
   const $counter = useStore(counter);
-  console.log(`React rendering`);
   return (
     <div className="flex flex-row gap-6 items-center">
       <Button label="-" onClick={() => counter.set($counter - 1)} />
@@ -14,4 +13,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default StateCounter;

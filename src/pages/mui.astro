@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/astro/Header.astro";
+import { Button } from "@mui/material";
+---
+
+<Layout title="Welcome to Astro.">
+  <Header title="Material UI Example" />
+  <ul
+    class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6"
+  >
+    <li class="list-item list-inside">Testing out MUI</li>
+  </ul>
+
+  <Button client:only="react" variant="outlined">Press me!</Button>
+
+  <style></style>
+</Layout>

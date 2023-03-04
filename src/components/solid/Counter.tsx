@@ -4,7 +4,6 @@ import Button from "./Button";
 
 export default function Counter() {
   const [count, setCount] = createSignal(0);
-  console.log(`Solid rendering`);
   return (
     <div class="flex flex-row gap-6 align-center items-center">
       <Button label="-" onClick={() => setCount(count() - 1)} />
