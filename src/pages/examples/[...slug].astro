@@ -21,14 +21,15 @@ const { slug } = Astro.params;
 // 2. Query for the entry directly using the request slug
 const entry = await getEntryBySlug("example", slug ?? "");
 // 3. (Optional) render the entry to HTML in the template
-const { Content } = await entry?.render();
+const result = await entry?.render();
+const Content = result?.Content;
 ---
 
 <Layout title="Boo">
   <Header title={entry?.data.title ?? ""} />
 
   <article>
-    <Content />
+    {Content && <Content />}
   </article>
 </Layout>
 
