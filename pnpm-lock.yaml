@@ -10,6 +10,7 @@ specifiers:
   '@astrojs/vue': ^2.0.1
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
+  '@mui/icons-material': ^5.11.11
   '@mui/material': ^5.11.11
   '@nanostores/react': ^0.4.1
   '@nanostores/solid': ^0.3.2
@@ -41,6 +42,7 @@ dependencies:
   '@astrojs/vue': 2.0.1_astro@2.0.17+vue@3.2.47
   '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
   '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia
+  '@mui/icons-material': 5.11.11_h5fh5ntwxtyr677wxvzgewjsma
   '@mui/material': 5.11.11_xqeqsl5kvjjtyxwyi3jhw3yuli
   '@nanostores/react': 0.4.1_nkfnbc2tpc77iht7asm3uqwau4
   '@nanostores/solid': 0.3.2_mmacn6hu7f5b6gra6h53zmsivu
@@ -1213,6 +1215,23 @@ packages:
 
   /@mui/core-downloads-tracker/5.11.11:
     resolution: {integrity: sha512-0YK0K9GfW1ysw9z4ztWAjLW+bktf+nExMyn2+EQe1Ijb0kF2kz1kIOmb4+di0/PsXG70uCuw4DhEIdNd+JQkRA==}
+    dev: false
+
+  /@mui/icons-material/5.11.11_h5fh5ntwxtyr677wxvzgewjsma:
+    resolution: {integrity: sha512-Eell3ADmQVE8HOpt/LZ3zIma8JSvPh3XgnhwZLT0k5HRqZcd6F/QDHc7xsWtgz09t+UEFvOYJXjtrwKmLdwwpw==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.0.0
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@mui/material': 5.11.11_xqeqsl5kvjjtyxwyi3jhw3yuli
+      '@types/react': 18.0.28
+      react: 18.2.0
     dev: false
 
   /@mui/material/5.11.11_xqeqsl5kvjjtyxwyi3jhw3yuli:

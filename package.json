@@ -20,6 +20,7 @@
     "@astrojs/vue": "^2.0.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
     "@nanostores/react": "^0.4.1",
     "@nanostores/solid": "^0.3.2",

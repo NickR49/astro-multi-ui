@@ -2,13 +2,13 @@
 import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/astro/Header.astro";
+import Title from "../components/astro/Title.astro";
 
 const allExamples = await getCollection("example");
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header title="Astro Multi-framework Demo" />
+  <Title title="Astro Multi-framework Demo" />
   <article>
     <h2 class="font-bold">Examples</h2>
     <ul>

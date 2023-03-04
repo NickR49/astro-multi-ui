@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/astro/Header.astro";
+import Title from "../../components/astro/Title.astro";
 
 // Code for SSG
 // import {getCollection, CollectionEntry} from 'astro:content'
@@ -26,16 +26,16 @@ const Content = result?.Content;
 ---
 
 <Layout title="Boo">
-  <Header title={entry?.data.title ?? ""} />
-
   <article>
+    <Title title={entry?.data.title ?? ""} />
     {Content && <Content />}
   </article>
 </Layout>
 
 <style>
   article {
-    @apply mx-auto max-w-2xl;
-    margin-bottom: 2rem;
+    /* @apply mx-auto max-w-2xl; */
+    /* margin-bottom: 2rem; */
+    margin: 24px;
   }
 </style>
