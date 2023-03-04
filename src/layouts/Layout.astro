@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-const items = await getCollection("example");
+const examples = await getCollection("example");
 ---
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ const items = await getCollection("example");
   </head>
   <body>
     <div class="container3">
-      <nav><LeftNav items={items} client:only="react" /></nav>
+      <nav><LeftNav items={examples} client:only="react" /></nav>
       <header>
         <Header onClick={() => alert("Boo!")} client:only="react" />
       </header>
@@ -39,10 +39,18 @@ const items = await getCollection("example");
     height: 100vh;
     display: grid;
     grid-template-areas:
-      "nav    header"
-      "nav    main";
+      "header    header"
+      "nav       main";
     grid-template-rows: 60px 1fr;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 280px calc(100vw - 280px);
+  }
+  @media only screen and (max-width: 600px) {
+    .container3 {
+      grid-template-areas:
+        "header"
+        "main";
+      grid-template-columns: 100vw;
+    }
   }
   nav {
     grid-area: nav;
@@ -70,12 +78,6 @@ const items = await getCollection("example");
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
   }
-  /* main {
-    margin: auto;
-    padding: 1rem;
-    padding-top: 0;
-    max-width: 60ch;
-  } */
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
