@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/astro/Title.astro";
+import Calculator from "../components/solid/Calculator";
+---
+
+<Layout title="Welcome to Astro.">
+  <Title title="Calculator" />
+
+  <Calculator client:only="solid" />
+
+  <style></style>
+</Layout>
