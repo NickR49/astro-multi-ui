@@ -1,3 +1,6 @@
-import { atom } from "nanostores";
+import { persistentAtom } from "@nanostores/persistent";
 
-export const open = atom(true);
+export const open = persistentAtom<boolean>("open", false, {
+  encode: JSON.stringify,
+  decode: JSON.parse,
+});

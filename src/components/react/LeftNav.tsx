@@ -54,7 +54,11 @@ export default function LeftNav(props: Props) {
               <ListItemText
                 primary={
                   <a href={`/examples/${item.slug}`}>{item.data.title}</a>
+                  // item.data.title
                 }
+                // onClick={() =>
+                //   (window.location.href = `/examples/${item.slug}`)
+                // }
               />
             </ListItemButton>
           </ListItem>

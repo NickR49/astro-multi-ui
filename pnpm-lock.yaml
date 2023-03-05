@@ -12,6 +12,7 @@ specifiers:
   '@emotion/styled': ^11.10.6
   '@mui/icons-material': ^5.11.11
   '@mui/material': ^5.11.11
+  '@nanostores/persistent': ^0.7.0
   '@nanostores/react': ^0.4.1
   '@nanostores/solid': ^0.3.2
   '@nanostores/vue': ^0.7.0
@@ -44,6 +45,7 @@ dependencies:
   '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia
   '@mui/icons-material': 5.11.11_h5fh5ntwxtyr677wxvzgewjsma
   '@mui/material': 5.11.11_xqeqsl5kvjjtyxwyi3jhw3yuli
+  '@nanostores/persistent': 0.7.0_nanostores@0.7.4
   '@nanostores/react': 0.4.1_nkfnbc2tpc77iht7asm3uqwau4
   '@nanostores/solid': 0.3.2_mmacn6hu7f5b6gra6h53zmsivu
   '@nanostores/vue': 0.7.0_5k5a5xuqaffd2s4dm6vugcn64i
@@ -1362,6 +1364,15 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
+    dev: false
+
+  /@nanostores/persistent/0.7.0_nanostores@0.7.4:
+    resolution: {integrity: sha512-4PAInL/T1hbftZUJ0cmgdFHBMalUoq7BUXFBy7QfyMv/8X3LPTYNh/yxspL7+J+XM3UNvVI7IFRMMs6FBasjhQ==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      nanostores: ^0.7.0
+    dependencies:
+      nanostores: 0.7.4
     dev: false
 
   /@nanostores/react/0.4.1_nkfnbc2tpc77iht7asm3uqwau4:

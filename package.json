@@ -22,6 +22,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
+    "@nanostores/persistent": "^0.7.0",
     "@nanostores/react": "^0.4.1",
     "@nanostores/solid": "^0.3.2",
     "@nanostores/vue": "^0.7.0",
