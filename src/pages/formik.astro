@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/astro/Title.astro";
+import FormikExample from "../components/react/FormikExample";
+---
+
+<Layout title="Welcome to Astro.">
+  <Title title="Formik Example" />
+  <ul
+    class="list-disc border-2 bg-slate-100 p-2 border-gray-700 rounded-md mb-6"
+  >
+    <li class="list-item list-inside">Testing out Formik form submission</li>
+  </ul>
+
+  <FormikExample client:only="react" />
+
+  <style></style>
+</Layout>

@@ -42,7 +42,8 @@ const examples = await getCollection("example");
       "header    header"
       "nav       main";
     grid-template-rows: 60px 1fr;
-    grid-template-columns: 280px calc(100vw - 280px);
+    grid-template-columns: 280px 1fr;
+    grid-gap: 8px;
   }
   @media only screen and (max-width: 600px) {
     .container3 {
