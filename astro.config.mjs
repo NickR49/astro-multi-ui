@@ -23,7 +23,11 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [solidJs(), react(), tailwind(), vue(), svelte(), mdx()],
+  integrations: [solidJs({
+    include: ['**/solid/*'],
+  }), react({
+    include: ['**/react/*'],
+  }), tailwind(), vue(), svelte(), mdx()],
   output: "server",
   adapter: vercel(),
   markdown: {
