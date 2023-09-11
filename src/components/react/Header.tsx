@@ -34,7 +34,7 @@ export default function Header(props: Props) {
           </IconButton>
         )}
         <a href="/">
-          <Typography ml={smallScreen ? 1 : 2}>N I X</Typography>
+          <Typography ml={smallScreen ? 1 : 2}>N I X  (Powered by Bun!)</Typography>
         </a>
       </Toolbar>
     </AppBar>
