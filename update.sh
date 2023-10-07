@@ -1,1 +1,3 @@
-pnpm update --interactive --latest
+#pnpm update --interactive --latest
+bun update
+
